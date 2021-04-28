@@ -1,6 +1,6 @@
 # **Welcome on my VeeamBook Repositories**
 
-You can found script and tools used on my book Veeam 
+You can found scripts and tools used on my book Veeam 
 
 ## Script
 
