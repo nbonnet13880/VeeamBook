@@ -1,0 +1,18 @@
+apt-get update
+
+apt install uuid-runtime build-essential sg3-utils apache2 psmisc linux-headers-`uname -r`
+
+systemctl restart apache2
+
+wget -c https://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u12_amd64.deb
+
+apt install ./libssl1.0.0_1.0.1t-1+deb8u12_amd64.deb
+
+wget -c https://www.quadstor.com/vtldownloads/quadstor-vtl-ext-3.0.55-debian-x86_64.deb
+
+apt install ./quadstor-vtl-ext-3.0.55-debian-x86_64.deb
+
+systemctl enable --now quadstorvtl.service
+
+/quadstorvtl/bin/vtconfig --reload
+
